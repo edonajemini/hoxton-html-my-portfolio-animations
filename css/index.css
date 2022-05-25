@@ -8,8 +8,8 @@
     container {
         display: grid;
         grid-template:
-        'first first first' 400px
-        'second second second'400px
+        'first first first' 2fr
+        'second second second'auto
         'section section section' 500px
         'footer footer footer' 80px/
         300px 1fr 200px;
@@ -66,15 +66,18 @@
     .profile{
        grid-area: profile;
        display:flex;
+       padding-bottom: 50px;
     }
-    .profile__svg{
-        padding-top:150px ;
+    
+    .profile__svg img{
+        width: 200px;
+        padding-top:200px ;
         padding-left: 30px;
-        display: inline;
+        display: inline-flex;
     }
-    .profile__svg:hover{
-        transform: rotate(360deg);
-        transition: transform 200ms, width 500ms,
+    .profile__svg img:hover
+    {
+    transform: rotate(220rad);
     }
     .profile__text{ 
         margin-top: 250px;
@@ -132,7 +135,7 @@
           margin-right: 20px;
         
       }
-
+      
       .project ,h4{
         padding-top: 10px;
         padding-left: 15px;
@@ -183,15 +186,17 @@
         grid-area: section;
         display:grid;
         background-color: rgba(236, 212, 212, 0.457);
-        
+        padding-left: 10px;
+        padding-right: 300px;
+        padding-bottom: 20p;
     }
-    
+
     ul .section_experience {
         align-items: center;
-        margin-top: 20px;
+        margin-top: 30px;
         margin-left: 30px;
         margin-right: 30px;
-        padding-left: 300px;
+        
         list-style: none;
         display: flex;
         gap: 1rem;
@@ -199,7 +204,16 @@
         box-shadow:0px 2px 5px 2px rgba(157, 114, 114, 0.75);
         border-radius: 10px;
     }
-    
+    ul .section_experience:hover {
+        border: 1px solid rgb(218, 186, 186);
+        box-shadow:0px 2px 5px 2px rgba(221, 196, 196, 0.75);
+    }
+    ul .section_experience img {
+        padding-left: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        width: 40px;
+    }
     section h3 {
         padding-top: 130px;
         padding-left: 30px;
